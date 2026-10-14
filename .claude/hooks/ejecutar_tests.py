@@ -17,7 +17,7 @@ ruta = datos.get("tool_input", {}).get("file_path", "")
 
 if not ruta.endswith(".py"):
     sys.exit(0)  # No es código Python: no hay nada que probar
-
+#eeeeee
 proyecto = os.path.join(os.environ.get("CLAUDE_PROJECT_DIR", "."), "proyecto-demo")
 resultado = subprocess.run(
     [sys.executable, "-m", "unittest", "discover", "-s", "tests"],
