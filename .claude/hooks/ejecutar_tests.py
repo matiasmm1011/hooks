@@ -17,7 +17,6 @@ ruta = datos.get("tool_input", {}).get("file_path", "")
 
 if not ruta.endswith(".py"):
     sys.exit(0)  # No es código Python: no hay nada que probar
-#eeeeee
 proyecto = os.path.join(os.environ.get("CLAUDE_PROJECT_DIR", "."), "proyecto-demo")
 resultado = subprocess.run(
     [sys.executable, "-m", "unittest", "discover", "-s", "tests"],
@@ -29,8 +28,6 @@ resultado = subprocess.run(
 )
 salida = resultado.stderr.strip()  # unittest escribe su reporte en stderr
 resumen = salida.splitlines()[-1] if salida else ""
-#holaaaa
-#hello
 if resultado.returncode != 0:
     print(
         "❌ El hook ejecutó las pruebas después de tu cambio y FALLARON.\n"
