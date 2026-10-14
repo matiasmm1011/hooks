@@ -29,7 +29,7 @@ resultado = subprocess.run(
 )
 salida = resultado.stderr.strip()  # unittest escribe su reporte en stderr
 resumen = salida.splitlines()[-1] if salida else ""
-
+#holaaaa
 if resultado.returncode != 0:
     print(
         "❌ El hook ejecutó las pruebas después de tu cambio y FALLARON.\n"
